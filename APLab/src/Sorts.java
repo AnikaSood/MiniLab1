@@ -168,4 +168,16 @@ public class Sorts {
 	        System.out.println(is);
 	    }
 }
-
+/* MOST EFFICIENT SORT:
+ * 
+ * In this class, we tracked the number of comparisons, swaps, 
+ * and total operations for each type of sort.
+ * The numbers show that the most efficient is selection sort because it consistently has the least 
+ * number of total operations. 
+ * Although insertion uses less comparisons, the number of swaps for this sorting method is very large,
+ * making it less efficient than selection.
+ * Bubble sort consistently has the most swaps, comparisons, and operations making it the least efficient of the three. 
+ * 
+ * 
+ * 
+ */

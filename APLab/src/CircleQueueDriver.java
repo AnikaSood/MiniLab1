@@ -83,12 +83,12 @@ public class CircleQueueDriver {
 		Cupcakes.key = Cupcakes.KeyType.flavor;
 		Alphabet.key = Alphabet.KeyType.letter;
 		Fruits.key = Fruits.KeyType.name;
-		trial.cqueue.insertionSort();
+		//trial.cqueue.insertionSort();
 		
-		
+		/*
 		System.out.println("SORTED INSERT*********************");
 		trial.showCQueue();
-		
+		*/
 		trial.cqueue.selectionSort(); //SELECTION SORT ADDED
 		System.out.println("SORTED SELECT**********************");
 		trial.showCQueue();

@@ -52,6 +52,7 @@ public class ALDriver {
 			Alphabet.key = Alphabet.KeyType.letter;
 			Fruits.key = Fruits.KeyType.name;
 			trial.list.insertionSort();
+			System.out.println("SELECTION SORT******************************\n");
 			trial.list.selectionSort(); //SELECTION SORT ADDED
 			trial.showList();
 			

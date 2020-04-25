@@ -202,36 +202,32 @@ public class CircleQueue  extends Generics {
 	  
 	  public void selectionSort() {
 		  
-		  
-
 		  LinkedList node1 = headNode;
 		  
 		  { 
-		      LinkedList storeNode = node1; 
+		      LinkedList curr = node1; 
 		    
-		      // Traverse the List 
-		      while (storeNode != null) { 
-		          LinkedList min = storeNode; 
-		          LinkedList nodeNew = storeNode.getNext(); 
+		      // traverse through the list
+		      for(curr= node1; curr !=null; curr=curr.getNext()) { 
+		          LinkedList min = curr; 
+		          LinkedList next = curr.getNext(); 
 		    
-		          // Traverse the unsorted sublist 
-		          while (nodeNew != null) { 
-		              if ((min.getObject().toString()).compareTo(nodeNew.getObject().toString()) > 0) 
-		                  min = nodeNew; 
+		          // next tracks the next node in the list 
+		          for(next=curr.getNext(); next!=null; next=next.getNext()) { 
+		              if ((min.getObject().toString()).compareTo(next.getObject().toString()) > 0) 
+		            	  min = next; 
 		    
-		              nodeNew = nodeNew.getNext(); 
-		          } 
+		          }
 		    
-		          // Swap Data 
-		          Object x = storeNode.getObject(); 
-		          storeNode.setObject(min.getObject()); 
-		          x = min.getObject();
-		          storeNode = storeNode.getNext(); 
+		          //swap the min and max values
+		          Object x = curr.getObject(); 
+		          curr.setObject(min.getObject()); 
+		          min.setObject(x);
 		      } 
+		    
 	  }
-		  }
 		  
-	    		
+	  }   	
 }
 
 		
