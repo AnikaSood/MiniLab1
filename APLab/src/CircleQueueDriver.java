@@ -1,4 +1,5 @@
 
+
 public class CircleQueueDriver {
 	
 	private CircleQueue cqueue;	// circle queue object
@@ -65,6 +66,7 @@ public class CircleQueueDriver {
 	public static void main(String[] args)
 	
 	{			
+		
 		//queue
 		CircleQueueDriver trial = new CircleQueueDriver();
 		
@@ -82,7 +84,13 @@ public class CircleQueueDriver {
 		Alphabet.key = Alphabet.KeyType.letter;
 		Fruits.key = Fruits.KeyType.name;
 		trial.cqueue.insertionSort();
+		
+		
+		System.out.println("SORTED INSERT*********************");
+		trial.showCQueue();
+		
 		trial.cqueue.selectionSort(); //SELECTION SORT ADDED
+		System.out.println("SORTED SELECT**********************");
 		trial.showCQueue();
 		
 		//display queue objects
@@ -94,8 +102,6 @@ public class CircleQueueDriver {
 		
 		//delete queue objects
 		trial.deleteCQueue();
-		
-		
 		
 		
 	

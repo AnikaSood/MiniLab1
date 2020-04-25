@@ -1,5 +1,7 @@
 import java.util.*;
 
+
+
 public class CircleQueue  extends Generics {
 	 private LinkedList headNode;			// 1st element in Queue
 	   private LinkedList tailNode;			// Last element in Queue
@@ -200,39 +202,36 @@ public class CircleQueue  extends Generics {
 	  
 	  public void selectionSort() {
 		  
-
-		  LinkedList node1;
-		  LinkedList node2;
 		  
-		  for (node1= headNode; node1.getNext().getNext() != null; node1.getNext()) //stops traversing the LinkedList two spots before the end of the list
-		  {
-			  LinkedList slot1 = node1;
-			  
-			  for(node2 = node1.getNext(); node2.getNext() != null; node2.getNext())
-			  {
-				  LinkedList slot2 = node2;
-				  LinkedList key = new LinkedList(node2);	
-				  String keyText = node2.getObject().toString();
-				 
-				  if(slot1.getObject().toString().compareTo(keyText)>0)
-				  {
-					  slot1 = node2;
-				  }
-				  
-			  }
-			  
-			  //swap
-			  LinkedList temp = node1;
-			  node1.setObject(slot1.getObject());
-			  slot1.setObject(temp.getObject());
-			  
-			  
-			  
 
+		  LinkedList node1 = headNode;
+		  
+		  { 
+		      LinkedList storeNode = node1; 
+		    
+		      // Traverse the List 
+		      while (storeNode != null) { 
+		          LinkedList min = storeNode; 
+		          LinkedList nodeNew = storeNode.getNext(); 
+		    
+		          // Traverse the unsorted sublist 
+		          while (nodeNew != null) { 
+		              if ((min.getObject().toString()).compareTo(nodeNew.getObject().toString()) > 0) 
+		                  min = nodeNew; 
+		    
+		              nodeNew = nodeNew.getNext(); 
+		          } 
+		    
+		          // Swap Data 
+		          Object x = storeNode.getObject(); 
+		          storeNode.setObject(min.getObject()); 
+		          x = min.getObject();
+		          storeNode = storeNode.getNext(); 
+		      } 
+	  }
 		  }
 		  
 	    		
-	  }
 }
 
 		
